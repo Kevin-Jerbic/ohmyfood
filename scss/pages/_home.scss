@@ -8,9 +8,8 @@
     z-index: 10;
     text-align: center;
     opacity: 0.9;
-    animation: disappear 0.2s 0.5s linear forwards;
-    -webkit-animation: disappear 0.2s 0.5s linear forwards;
-    // Remettre 5s duration
+    animation: disappear 0.2s 5s linear forwards;
+    -webkit-animation: disappear 0.2s 5s linear forwards;
 }
 .loader {
     width: 100px;
