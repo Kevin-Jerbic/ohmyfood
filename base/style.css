@@ -1,0 +1,217 @@
+/* Reset */
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animation / transition */
+body {
+    background-color: lightgray;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+@keyframes menuFadeIn {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+.container {
+    margin-left: 1rem;
+    opacity: 0;
+    animation: menuFadeIn 10s forwards;
+    width: 500px;
+}
+
+.menu__item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    /* Pour cacher notre check qui dépasse les 500px, cf width .container*/
+    overflow: hidden;
+    cursor: pointer;
+    height: 80px;
+    margin-bottom: 20px;
+}
+.menu__item__txt {
+    flex: 1;
+    padding-left: 20px;
+    /* Affichage ... quand l'espace est insuffisant */
+    white-space: nowrap;
+    overflow: hidden;
+}
+.menu__item__txt--title {
+    padding-top: 1rem;
+}
+.menu__item__txt--description {
+    /* Affichage ... suite */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+.menu__item__price {
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu__item__check {
+    width: 5rem;
+    height: 100%;
+    /* Margin négative pour sortir à droite du cadre */
+    margin-right: -5rem;
+    background-color: #99e2d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+/* Animation check */
+.menu__item:hover > .menu__item__check {
+    margin: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.fa-circle-check {
+    color: white;
+}
+
+.menu__item__txt--title,
+.menu__item__txt--description {
+    margin: 0;
+}
+
+/* Liste / Navigation */
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.list li {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    background-color: #f6f6f6;
+    font-weight: bold;
+}
+
+.list--number {
+    background-color: #9356dc;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem;
+    margin-left: -1.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+}
+
+.fa-mobile-alt,
+.fa-list {
+    color: grey;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.fa-store {
+    color: #9356dc;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Card restaurant */
+.cards {
+    width: 350px;
+    margin-left: 1rem;
+}
+
+.cards a {
+    text-decoration: none;
+    color: black;
+}
+
+.cards__item {
+    border-top: 20%;
+}
+
+.cards__item img {
+    width: 100%;
+    height: 10rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    vertical-align: bottom;
+}
+
+.cards__item__content {
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.cards__item__content__txt {
+    flex: 1;
+}
+
+.cards__item__content__txt--title {
+    margin: 0;
+}
+
+.cards__item__txt--subtitle {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.cards__item__like {
+    font-size: 1.5rem;
+    padding-right: 20px;
+    padding-top: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* .fa-heart {
+    transition: 1s ease-in-out;
+}
+
+.fa-heart:hover {
+    color: #ff79da;
+} */
+
+/* from #FF79DA to #9356DC */
+.fa-heart {
+    position: absolute;
+}
+
+.liked-heart {
+    opacity: 0;
+    transition: opacity .7s ease-in-out;
+    /* Sinon par défaut le noir est appliqué */
+    color: transparent;
+    /* Pour que le gradient marche à l'intérieur du coeur et non dans un carré */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.liked-heart:hover {
+    opacity: 1;
+    background-image: linear-gradient(#ff79da, #9356dc);
+}

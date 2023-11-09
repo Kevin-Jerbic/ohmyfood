@@ -1,0 +1,7 @@
+//On peut créer un fichier _variables.scss, un autre _mixins.scss, et un dernier _functions.scss pour exemple.
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,363 @@
+// Animation Loading
+.section-loader {
+    position: fixed;
+    background-color: $dark-grey;
+    color: $light-grey;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    text-align: center;
+    opacity: 0.9;
+    animation: disappear 0.2s 0.5s linear forwards;
+    -webkit-animation: disappear 0.2s 0.5s linear forwards;
+    // Remettre 5s duration
+}
+.loader {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.loader-circles {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: $purple;
+    animation: spin 0.7s linear infinite;
+    -webkit-animation: spin 0.7s linear infinite;
+    margin-top: calc(50vh - 100px);
+    margin-bottom: 2rem;
+}
+
+.loader-circles::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-top-color: $green;
+    opacity: 0.8;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+}
+
+.loader-circles::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    bottom: 13px;
+    right: 13px;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border-top-color: $light-purple;
+    opacity: 0.5;
+    animation: spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+}
+
+.wavy span {
+    font-family: $font-logo-title;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    animation: wavy 1.4s infinite;
+    -webkit-animation: wavy 1.4s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+// Animation Loader Spin
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+// Animation Loader text
+@keyframes wavy {
+    0%,
+    40%,
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+}
+
+// Animation Loader 'fin'
+@keyframes disappear {
+    to {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+}
+
+// Button localisation
+#tracking {
+    display: none;
+}
+
+// Header
+header form {
+    height: 3.1rem;
+    background-color: #eaeaea;
+    box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.15);
+    @include flex-center;
+}
+header div i {
+    margin-right: 10px;
+}
+header input {
+    width: 7.5rem;
+    font-size: $font-size-16;
+    font-weight: bold;
+    border: none;
+    background-color: #eaeaea;
+}
+
+// Hero Bandeau
+.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-grey;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+}
+.hero h2 {
+    font-size: $font-size-24;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.hero p {
+    color: $dark-grey;
+    font-size: $font-size-18;
+    margin-bottom: 1.5rem;
+}
+.hero a {
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    background: $gradient;
+    font-size: $font-size-16;
+    width: 13.6rem;
+    padding: 1rem 0;
+}
+
+// Functionality
+.functionality {
+    margin-top: 3rem;
+    padding: 0 20px 44px 20px;
+}
+.functionality h2 {
+    font-size: $font-size-24;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.functionality__list {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.functionality__list li {
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    background-color: $light-grey;
+    font-weight: bold;
+}
+.functionality__list__number {
+    background-color: $purple;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem;
+    margin-left: -1.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 14px;
+    @include flex-center;
+}
+.fa-mobile-alt,
+.fa-list {
+    color: grey;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+.fa-store {
+    color: #9356dc;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+// Restaurants
+.restaurants {
+    background-color: $light-grey;
+    padding: 50px 20px 60px 20px;
+    margin-left: auto;
+}
+.restaurants h2 {
+    font-size: $font-size-24;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.restaurants-card {
+    width: 100%;
+    margin-bottom: 18px;
+}
+.restaurants-card a {
+    text-decoration: none;
+    color: black;
+}
+.restaurants-card__item {
+    position: relative;
+}
+.restaurants-card__item img {
+    width: 100%;
+    height: 10rem;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    vertical-align: bottom;
+    object-fit: cover;
+}
+.restaurants-card__item_badge {
+    //.restaurants-card__item est en relatif L.248
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: $green;
+    color: #008766;
+    padding: 5px 10px;
+}
+.restaurants-card__item__content {
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.restaurants-card__item__content__txt {
+    flex: 1;
+}
+.restaurants-card__item__content__txt__title {
+    font-weight: bold;
+    font-size: $font-size-18;
+}
+.restaurants-card__item__txt__subtitle {
+    font-size: $font-size-17;
+    padding: 5px 0;
+}
+
+// Media Queries
+@media (min-width: 767.98px) {
+    // Hero Bandeau
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+    }
+    // Functionnality
+    .functionality {
+        margin-top: 3rem;
+        padding-bottom: 26px;
+    }
+    .functionality__list {
+        align-items: center;
+    }
+    // Restaurants
+    .restaurants {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    // Functionnality
+    .functionality {
+        padding-bottom: 50px;
+    }
+    .functionality__list {
+        flex-direction: row;
+    }
+    .functionality__list li {
+        margin-bottom: 0;
+    }
+    .functionality__list li:nth-child(2) {
+        margin: 0 2rem;
+    }
+    // Restaurants 
+    .restaurants-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .restaurants-card {
+        width: 48%;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    // Functionnality
+    .functionality h2 {
+        margin-left: 180px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .functionality__list {
+        justify-content: center;
+    }
+    // Restaurants
+    .restaurants h2 {
+        margin-left: 180px;
+    }
+    .restaurants-list {
+        margin: 0 180px;
+        gap: 50px 100px;
+    }
+    .restaurants-card {
+        width: 45%;
+    }
+    .restaurants-card__item img {
+        height: 12rem;
+    }
+}

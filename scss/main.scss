@@ -1,0 +1,124 @@
+// Imports
+@import "base/typography"; // importe le fichier _typography.scss, pas besoin de préciser l'underscore et le .scss.
+@import "base/normalize";
+@import "utils/mixin";
+@import "pages/home";
+@import "pages/restaurant";
+
+body {
+    font-family: $font-text;
+}
+
+h1 {
+    font-family: $font-logo-title;
+    font-size: $font-size-30;
+    height: 4rem;
+    @include flex-center;
+}
+
+// Animation like d'un restaurant
+.restaurants-card__item__like {
+    font-size: 1.5rem;
+    padding-right: 30px;
+    padding-top: 10px;
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+}
+.fa-heart {
+    position: absolute;
+}
+.liked-heart {
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    -ms-transition: opacity 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out;
+    /* Sinon par défaut le noir est appliqué */
+    color: transparent;
+    /* Pour que le gradient marche à l'intérieur du coeur et non dans un carré */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.liked-heart:hover {
+    opacity: 1;
+    background-image: linear-gradient(#ff79da, #9356dc);
+}
+
+// Footer
+footer {
+    padding: 1.5rem;
+    background-color: $dark-grey;
+    color: white;
+    font-size: $font-size-16;
+}
+footer img {
+    margin-bottom: 1.2rem;
+    width: 6.5rem;
+}
+.footnav__list li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.footnav__list li {
+    padding-bottom: 0.5rem;
+}
+
+.fa-utensils,
+.fa-handshake-angle {
+    font-size: 16px;
+}
+.fa-utensils {
+    margin-right: 1rem;
+}
+.fa-handshake-angle {
+    margin-right: 0.6rem;
+}
+
+// Media Queries
+@media (min-width: 767.98px) {
+    // Footer
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    footer img {
+        margin-bottom: 0;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+    // Footer
+    footer {
+        justify-content: flex-start;
+        height: 5rem;
+    }
+    .footnav__list {
+        display: flex;
+    }
+    .footnav__list li {
+        margin-right: 10px;
+        padding-bottom: 0;
+        line-height: 5rem;
+    }
+    .footnav__list li:nth-child(3) {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1440px) {
+    
+}

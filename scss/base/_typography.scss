@@ -1,0 +1,25 @@
+//C'est ici que l'on va mettre les fichiers .scss qui servent de base à l'ensemble du style du texte : _normalize.scss
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$font-logo-title : 'Shrikhand', serif;
+$font-text: 'Roboto', sans-serif;
+
+// Font size
+$font-size-16: 16px;
+$font-size-17: 17px;
+$font-size-18: 18px;
+$font-size-24: 24px;
+$font-size-30: 30px;
+
+// Colours
+$white: #fff;
+$light-grey: #F6F6F6;
+$dark-grey: #353535;
+$green: #99E2D0;
+$purple: #9356DC;
+$light-purple: #ff79da;
+$gradient: linear-gradient(#ff79da, #9356dc);
