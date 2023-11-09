@@ -70,8 +70,7 @@
     animation: menuFadeIn 0.8s forwards ease-in-out;
     -webkit-animation: menuFadeIn 0.8s forwards ease-in-out;
 }
-// Qui est donc mon PREMIER ENFANT ?!!!!!!!
-// nth(X) n'est-il pas censé pointer le Xème élément ?
+
 .container__menu:nth-child(2) {
     animation-delay: 0.1s;
 }
