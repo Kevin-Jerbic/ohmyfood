@@ -191,7 +191,7 @@ header input {
     flex-wrap: nowrap;
 }
 .functionality__list li {
-    width: 17rem;
+    width: 90%;
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -301,6 +301,9 @@ header input {
     }
     .functionality__list {
         align-items: center;
+    }
+    .functionality__list li {
+        width: 17rem;
     }
     // Restaurants
     .restaurants {

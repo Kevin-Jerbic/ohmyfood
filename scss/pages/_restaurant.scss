@@ -180,6 +180,12 @@
 }
 
 // Media Queries
+@media (max-width: 340px) {
+    .restaurants-card__item__like {
+        margin-left: 1rem!important;
+    }
+}
+
 @media (min-width: 767.98px) {
     // Entrées, plats, desserts
     .container__title {
