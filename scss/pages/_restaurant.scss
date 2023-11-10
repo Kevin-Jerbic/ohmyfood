@@ -181,8 +181,8 @@
 
 // Media Queries
 @media (max-width: 340px) {
-    .restaurants-card__item__like {
-        margin-left: 1rem!important;
+    .container__title .restaurants-card__item__like {
+        margin-left: .8rem;
     }
 }
 
