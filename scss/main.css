@@ -60,8 +60,8 @@ table {
   z-index: 10;
   text-align: center;
   opacity: 0.9;
-  animation: disappear 0.2s 5s linear forwards;
-  -webkit-animation: disappear 0.2s 5s linear forwards;
+  animation: disappear 0.2s 3s linear forwards;
+  -webkit-animation: disappear 0.2s 3s linear forwards;
 }
 
 .loader {
