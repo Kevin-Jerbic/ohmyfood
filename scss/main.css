@@ -130,8 +130,46 @@ table {
   display: inline-block;
   color: #fff;
   animation: wavy 1.4s infinite;
-  -webkit-animation: wavy 1.4s infinite;
-  animation-delay: calc(0.1s * var(--i));
+}
+
+.wavy .delay-1 {
+  animation-delay: 0.1s;
+}
+
+.wavy .delay-2 {
+  animation-delay: 0.2s;
+}
+
+.wavy .delay-3 {
+  animation-delay: 0.3s;
+}
+
+.wavy .delay-4 {
+  animation-delay: 0.4s;
+}
+
+.wavy .delay-5 {
+  animation-delay: 0.5s;
+}
+
+.wavy .delay-6 {
+  animation-delay: 0.6s;
+}
+
+.wavy .delay-7 {
+  animation-delay: 0.7s;
+}
+
+.wavy .delay-8 {
+  animation-delay: 0.8s;
+}
+
+.wavy .delay-9 {
+  animation-delay: 0.9s;
+}
+
+.wavy .delay-10 {
+  animation-delay: 1s;
 }
 
 @keyframes spin {
@@ -176,11 +214,9 @@ header form {
   justify-content: center;
   align-items: center;
 }
-
 header div i {
   margin-right: 10px;
 }
-
 header input {
   width: 7.5rem;
   font-size: 16px;
@@ -199,19 +235,22 @@ header input {
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
 }
-
 .hero h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
+@media (min-width: 767.98px) {
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+  }
+}
 .hero p {
   color: #353535;
   font-size: 18px;
   margin-bottom: 1.5rem;
 }
-
 .hero a {
   text-decoration: none;
   color: white;
@@ -226,13 +265,29 @@ header input {
   margin-top: 3rem;
   padding: 0 20px 44px 20px;
 }
-
+@media (min-width: 767.98px) {
+  .functionality {
+    margin-top: 3rem;
+    padding-bottom: 26px;
+  }
+}
+@media (min-width: 1024px) {
+  .functionality {
+    padding-bottom: 50px;
+  }
+}
 .functionality h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
-
+@media (min-width: 1440px) {
+  .functionality h2 {
+    margin-left: 180px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .functionality__list {
   display: flex;
   flex-direction: column;
@@ -240,19 +295,21 @@ header input {
   justify-content: center;
   flex-wrap: nowrap;
 }
-
-.functionality__list li {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background-color: #F6F6F6;
-  font-weight: bold;
+@media (min-width: 767.98px) {
+  .functionality__list {
+    align-items: center;
+  }
 }
-
+@media (min-width: 1024px) {
+  .functionality__list {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+  .functionality__list {
+    justify-content: center;
+  }
+}
 .functionality__list__number {
   background-color: #9356DC;
   color: white;
@@ -265,6 +322,32 @@ header input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.functionality li {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  background-color: #F6F6F6;
+  font-weight: bold;
+}
+@media (min-width: 767.98px) {
+  .functionality li {
+    width: 17rem;
+  }
+}
+@media (min-width: 1024px) {
+  .functionality li {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .functionality li:nth-child(2) {
+    margin: 0 2rem;
+  }
 }
 
 .fa-mobile-alt,
@@ -287,27 +370,59 @@ header input {
   padding: 50px 20px 60px 20px;
   margin-left: auto;
 }
-
+@media (min-width: 767.98px) {
+  .restaurants {
+    padding-bottom: 30px;
+  }
+}
 .restaurants h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 1440px) {
+  .restaurants h2 {
+    margin-left: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurants-list {
+    margin: 0 180px;
+    gap: 50px 100px;
+  }
 }
 
 .restaurants-card {
   width: 100%;
   margin-bottom: 18px;
 }
-
+@media (min-width: 1024px) {
+  .restaurants-card {
+    width: 48%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurants-card {
+    width: 45%;
+  }
+}
 .restaurants-card a {
   text-decoration: none;
   color: black;
 }
-
 .restaurants-card__item {
   position: relative;
 }
-
 .restaurants-card__item img {
   width: 100%;
   height: 10rem;
@@ -317,8 +432,12 @@ header input {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.restaurants-card__item_badge {
+@media (min-width: 1440px) {
+  .restaurants-card__item img {
+    height: 12rem;
+  }
+}
+.restaurants-card__item__badge {
   position: absolute;
   top: 15px;
   right: 10px;
@@ -328,7 +447,6 @@ header input {
   color: #008766;
   padding: 5px 10px;
 }
-
 .restaurants-card__item__content {
   background-color: white;
   border-bottom-left-radius: 20px;
@@ -337,87 +455,18 @@ header input {
   display: flex;
   flex-direction: row;
 }
-
 .restaurants-card__item__content__txt {
   flex: 1;
 }
-
 .restaurants-card__item__content__txt__title {
   font-weight: bold;
   font-size: 18px;
 }
-
-.restaurants-card__item__txt__subtitle {
+.restaurants-card__item__content__txt__subtitle {
   font-size: 17px;
   padding: 5px 0;
 }
 
-@media (min-width: 767.98px) {
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 24px;
-  }
-  .functionality {
-    margin-top: 3rem;
-    padding-bottom: 26px;
-  }
-  .functionality__list {
-    align-items: center;
-  }
-  .functionality__list li {
-    width: 17rem;
-  }
-  .restaurants {
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 1024px) {
-  .functionality {
-    padding-bottom: 50px;
-  }
-  .functionality__list {
-    flex-direction: row;
-  }
-  .functionality__list li {
-    margin-bottom: 0;
-  }
-  .functionality__list li:nth-child(2) {
-    margin: 0 2rem;
-  }
-  .restaurants-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  .restaurants-card {
-    width: 48%;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 1440px) {
-  .functionality h2 {
-    margin-left: 180px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .functionality__list {
-    justify-content: center;
-  }
-  .restaurants h2 {
-    margin-left: 180px;
-  }
-  .restaurants-list {
-    margin: 0 180px;
-    gap: 50px 100px;
-  }
-  .restaurants-card {
-    width: 45%;
-  }
-  .restaurants-card__item img {
-    height: 12rem;
-  }
-}
 @keyframes menuFadeIn {
   0% {
     opacity: 0;
@@ -685,7 +734,6 @@ h1 {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-
 .liked-heart:hover {
   opacity: 1;
   background-image: linear-gradient(#ff79da, #9356dc);
@@ -697,21 +745,54 @@ footer {
   color: white;
   font-size: 16px;
 }
-
+@media (min-width: 767.98px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    justify-content: flex-start;
+    height: 5rem;
+  }
+}
 footer img {
   margin-bottom: 1.2rem;
   width: 6.5rem;
 }
+@media (min-width: 767.98px) {
+  footer img {
+    margin-bottom: 0;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
 
+@media (min-width: 1024px) {
+  .footnav__list {
+    display: flex;
+  }
+}
+.footnav__list li {
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .footnav__list li {
+    margin-right: 10px;
+    padding-bottom: 0;
+    line-height: 5rem;
+  }
+  .footnav__list li:nth-child(3) {
+    margin-left: 30px;
+  }
+}
 .footnav__list li a {
   text-decoration: none;
   color: white;
   display: flex;
   align-items: center;
-}
-
-.footnav__list li {
-  padding-bottom: 0.5rem;
 }
 
 .fa-utensils,
@@ -725,34 +806,4 @@ footer img {
 
 .fa-handshake-angle {
   margin-right: 0.6rem;
-}
-
-@media (min-width: 767.98px) {
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-  footer img {
-    margin-bottom: 0;
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-}
-@media (min-width: 1024px) {
-  footer {
-    justify-content: flex-start;
-    height: 5rem;
-  }
-  .footnav__list {
-    display: flex;
-  }
-  .footnav__list li {
-    margin-right: 10px;
-    padding-bottom: 0;
-    line-height: 5rem;
-  }
-  .footnav__list li:nth-child(3) {
-    margin-left: 30px;
-  }
 }/*# sourceMappingURL=main.css.map */
