@@ -54,7 +54,7 @@ table {
 .section-loader {
   position: fixed;
   background-color: #353535;
-  color: #F6F6F6;
+  color: #f6f6f6;
   width: 100vw;
   height: 100vh;
   z-index: 10;
@@ -78,7 +78,7 @@ table {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #9356DC;
+  border-top-color: #9356dc;
   animation: spin 0.7s linear infinite;
   -webkit-animation: spin 0.7s linear infinite;
   margin-top: calc(50vh - 100px);
@@ -98,7 +98,7 @@ table {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-  border-top-color: #99E2D0;
+  border-top-color: #99e2d0;
   opacity: 0.8;
   animation: spin 2s linear infinite;
   -webkit-animation: spin 2s linear infinite;
@@ -231,7 +231,7 @@ header input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
 }
@@ -255,10 +255,15 @@ header input {
   text-decoration: none;
   color: white;
   border-radius: 30px;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(193deg, #9356dc 0, #ff79da 100%);
   font-size: 16px;
   width: 13.6rem;
   padding: 1rem 0;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.hero a:hover {
+  background: linear-gradient(193deg, #a16be0 0, #ff93e1 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 .functionality {
@@ -311,7 +316,7 @@ header input {
   }
 }
 .functionality__list__number {
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   border-radius: 50%;
   padding: 0.2rem;
@@ -331,7 +336,7 @@ header input {
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   font-weight: bold;
 }
 @media (min-width: 767.98px) {
@@ -366,7 +371,7 @@ header input {
 }
 
 .restaurants {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 50px 20px 60px 20px;
   margin-left: auto;
 }
@@ -443,7 +448,7 @@ header input {
   right: 10px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
   padding: 5px 10px;
 }
@@ -510,7 +515,7 @@ header input {
 .container {
   position: relative;
   margin-top: -30px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   padding-bottom: 40px;
@@ -578,7 +583,7 @@ header input {
   bottom: -9px;
   width: 40px;
   height: 3px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 .container__menu__item {
   background-color: #fff;
@@ -673,12 +678,18 @@ header input {
   color: white;
   border-style: none;
   border-radius: 30px;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(193deg, #9356dc 0, #ff79da 100%);
   font-size: 16px;
   width: 12rem;
   padding: 1rem 0;
   display: block;
   margin: auto;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container #order:hover {
+  background: linear-gradient(193deg, #a16be0 0, #ff93e1 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 body {
