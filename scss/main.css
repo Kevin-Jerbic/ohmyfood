@@ -53,13 +53,11 @@ table {
 
 .section-loader {
   position: fixed;
-  background-color: #353535;
-  color: #f6f6f6;
+  background-color: #fff;
   width: 100vw;
   height: 100vh;
   z-index: 10;
   text-align: center;
-  opacity: 0.9;
   animation: disappear 0.2s 3s linear forwards;
   -webkit-animation: disappear 0.2s 3s linear forwards;
 }
@@ -128,7 +126,7 @@ table {
   font-size: 2rem;
   position: relative;
   display: inline-block;
-  color: #fff;
+  color: #353535;
   animation: wavy 1.4s infinite;
 }
 
@@ -354,20 +352,18 @@ header input {
     margin: 0 2rem;
   }
 }
-
-.fa-mobile-alt,
-.fa-list {
+.functionality li .fa-mobile-alt,
+.functionality li .fa-list,
+.functionality li .fa-store {
   color: grey;
   margin-left: 1rem;
   margin-right: 1rem;
   font-size: 1.2rem;
 }
-
-.fa-store {
+.functionality li:hover .fa-mobile-alt,
+.functionality li:hover .fa-list,
+.functionality li:hover .fa-store {
   color: #9356dc;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  font-size: 1.2rem;
 }
 
 .restaurants {
@@ -496,7 +492,7 @@ header input {
   left: 20px;
   font-size: 24px;
 }
-.header__nav a:visited {
+.header__nav a:link, .header__nav a:visited {
   color: black;
 }
 .header__img img {
@@ -560,7 +556,6 @@ header input {
   padding: 0 1rem;
   margin-bottom: 40px !important;
   opacity: 0;
-  text-transform: uppercase;
   margin-bottom: 21px;
   position: relative;
   animation: menuFadeIn 0.8s forwards ease-in-out;
@@ -612,6 +607,8 @@ header input {
   overflow: hidden;
 }
 .container__menu__item__txt__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;

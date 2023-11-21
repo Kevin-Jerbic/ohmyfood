@@ -26,6 +26,7 @@
             top: 20px;
             left: 20px;
             font-size: $font-size-24;
+            &:link,
             &:visited {
                 color: black;
             }
@@ -92,7 +93,6 @@
         padding: 0 1rem;
         margin-bottom: 40px !important;
         opacity: 0;
-        text-transform: uppercase;
         margin-bottom: 21px; // 12px + 9px à cause du ::after
         position: relative;
         //Animation au chargement
@@ -142,6 +142,8 @@
                 white-space: nowrap;
                 overflow: hidden;
                 &__title {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     font-size: $font-size-18;
                     font-weight: 600;
                     margin-bottom: 5px;

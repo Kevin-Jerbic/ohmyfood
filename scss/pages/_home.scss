@@ -1,13 +1,11 @@
 // Animation Loading
 .section-loader {
     position: fixed;
-    background-color: $dark-grey;
-    color: $light-grey;
+    background-color: $white;
     width: 100vw;
     height: 100vh;
     z-index: 10;
     text-align: center;
-    opacity: 0.9;
     animation: disappear 0.2s 3s linear forwards;
     -webkit-animation: disappear 0.2s 3s linear forwards;
 }
@@ -75,7 +73,7 @@
     font-size: 2rem;
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: $dark-grey;
     -webkit-animation: wavy 1.4s infinite;
     animation: wavy 1.4s infinite;
 }
@@ -265,20 +263,19 @@ header {
             margin: 0 2rem;
         }
     }
-}
-
-.fa-mobile-alt,
-.fa-list {
-    color: grey;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-}
-.fa-store {
-    color: #9356dc;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-size: 1.2rem;
+    li .fa-mobile-alt,
+    li .fa-list,
+    li .fa-store {
+        color: grey;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+    }
+    li:hover .fa-mobile-alt,
+    li:hover .fa-list,
+    li:hover .fa-store {
+        color: #9356dc;
+    }
 }
 
 // Restaurants
